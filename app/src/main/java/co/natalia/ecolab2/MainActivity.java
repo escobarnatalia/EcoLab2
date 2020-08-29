@@ -19,9 +19,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private TextView numContador;
     private int contador;
 
-    private ArrayList<Pregunta> preguntas;
-
-
+    private Pregunta pregunta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,10 +34,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         puntaje = findViewById(R.id.puntajeTx);
         numContador= findViewById(R.id.numeroContador);
 
-        preguntas = new ArrayList<Pregunta>();
+        pregunta = new Pregunta();
+
+        pregunta.preguntas();  
+        enunciado.setText(pregunta.getPregunta1() + "+" +pregunta.getPregunta2()));
+
 
         responderBtn.setOnClickListener(this);
-        enunciado.setText("hola");
+
 
 
 
@@ -49,9 +51,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
 
         String respuesta = usuarioRespuesta.getText().toString();
-        /*contador++;
-        numContador.setText(""+contador);*/
-
+        contador++;
+        numContador.setText(""+contador); 
 
     }
 }
