@@ -36,8 +36,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         pregunta = new Pregunta();
 
-        pregunta.preguntas();  
-        enunciado.setText(pregunta.getPregunta1() + "+" +pregunta.getPregunta2()));
+        pregunta.preguntas();
+        enunciado.setText(pregunta.getPregunta1() + "+" +pregunta.getPregunta2());
 
 
         responderBtn.setOnClickListener(this);
